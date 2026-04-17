@@ -13,6 +13,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Shield,
+  Building2,
 } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -26,6 +27,7 @@ import {
 const menuItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "대시보드" },
   { href: "/guardian", icon: Users, label: "보호자" },
+  { href: "/org", icon: Building2, label: "기관 관제" },
   { href: "/vital-cash", icon: Coins, label: "바이탈 캐시" },
   { href: "/subscription", icon: CreditCard, label: "구독 관리" },
   { href: "/settings", icon: Settings, label: "설정" },
