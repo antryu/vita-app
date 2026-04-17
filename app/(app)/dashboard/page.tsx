@@ -38,7 +38,7 @@ export default function DashboardPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-between">
         <div>
           <p className="text-xs text-muted-foreground">좋은 아침이에요</p>
-          <h1 className="text-xl font-bold">정호님</h1>
+          <h1 className="text-xl font-bold">종현님</h1>
         </div>
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">

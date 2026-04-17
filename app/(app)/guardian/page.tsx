@@ -30,7 +30,7 @@ const fadeUp = {
 const familyMembers = [
   {
     id: "member-001",
-    name: "이정호",
+    name: "안종현",
     relation: "아버지",
     age: 72,
     avatar: "JH",

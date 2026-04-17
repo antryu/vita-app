@@ -79,7 +79,7 @@ export function AppSidebar() {
                 JH
               </div>
               <div className="min-w-0">
-                <p className="text-xs font-medium truncate">이정호</p>
+                <p className="text-xs font-medium truncate">안종현</p>
                 <Badge className="bg-accent/20 text-accent border-0 text-[9px] px-1.5 py-0">
                   Premium
                 </Badge>

@@ -67,15 +67,15 @@ export default function SettingsPage() {
               JH
             </div>
             <div>
-              <p className="font-semibold">이정호</p>
-              <p className="text-xs text-muted-foreground">jungho@example.com</p>
+              <p className="font-semibold">안종현</p>
+              <p className="text-xs text-muted-foreground">jonghyun.ahn@example.com</p>
               <Badge variant="secondary" className="text-[10px] mt-1">Premium</Badge>
             </div>
           </div>
           <div className="space-y-3">
             <div className="space-y-1">
               <Label className="text-xs">이름</Label>
-              <Input defaultValue="이정호" className="h-9" />
+              <Input defaultValue="안종현" className="h-9" />
             </div>
             <div className="space-y-1">
               <Label className="text-xs">전화번호</Label>

@@ -43,7 +43,7 @@ const MOCK_MEMBERS: Record<string, {
   alerts: Array<{ severity: string; title: string; time: string; action: string }>;
 }> = {
   "member-001": {
-    name: "이정호", relation: "아버지", age: 72, avatar: "JH",
+    name: "안종현", relation: "아버지", age: 72, avatar: "JH",
     vitaScore: 87, status: "normal", hr: 68, spo2: 97.3,
     sleep: "6h 42m", deepSleep: "28%", stress: "낮음", stressScore: 32,
     location: "서울 강서구 마곡동", lastSeen: "3분 전", battery: 72, steps: 4328,
