@@ -11,11 +11,11 @@ import {
 } from "lucide-react";
 
 const items = [
-  { href: "/dashboard", icon: LayoutDashboard, label: "Home" },
-  { href: "/guardian", icon: Users, label: "Family" },
-  { href: "/org", icon: Building2, label: "Org" },
-  { href: "/vital-cash", icon: Coins, label: "Cash" },
-  { href: "/settings", icon: Settings, label: "More" },
+  { href: "/dashboard", icon: LayoutDashboard, label: "홈" },
+  { href: "/guardian", icon: Users, label: "보호자" },
+  { href: "/org", icon: Building2, label: "관제" },
+  { href: "/vital-cash", icon: Coins, label: "캐시" },
+  { href: "/settings", icon: Settings, label: "설정" },
 ];
 
 export function MobileNav() {

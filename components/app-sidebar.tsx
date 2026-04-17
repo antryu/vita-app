@@ -14,8 +14,10 @@ import {
   ChevronRight,
   Shield,
   Building2,
+  Sun,
+  Moon,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
@@ -36,6 +38,21 @@ const menuItems = [
 export function AppSidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+  const [dark, setDark] = useState(true);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("vita-theme");
+    const prefersDark = stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setDark(prefersDark);
+    document.documentElement.classList.toggle("dark", prefersDark);
+  }, []);
+
+  function toggleTheme() {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("vita-theme", next ? "dark" : "light");
+  }
 
   return (
     <TooltipProvider delay={0}>
@@ -110,6 +127,16 @@ export function AppSidebar() {
 
         {/* Bottom */}
         <div className="p-2 space-y-1">
+          <button
+            onClick={toggleTheme}
+            className={`flex items-center gap-3 px-3 py-2 rounded-lg text-xs text-white/40 hover:text-white/70 hover:bg-white/5 transition-colors w-full ${
+              collapsed ? "justify-center" : ""
+            }`}
+          >
+            {dark ? <Sun className="w-3.5 h-3.5 shrink-0" /> : <Moon className="w-3.5 h-3.5 shrink-0" />}
+            {!collapsed && <span>{dark ? "라이트 모드" : "다크 모드"}</span>}
+          </button>
+
           <a
             href="https://vita-platform.vercel.app"
             target="_blank"

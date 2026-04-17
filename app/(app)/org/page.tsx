@@ -113,7 +113,7 @@ export default function OrgDashboard() {
           <div className="space-y-3">
             {alerts.map((a, i) => (
               <div key={i} className={`p-3 rounded-lg border ${
-                a.severity === "critical" ? "bg-red-50 border-red-200 dark:bg-red-950/20 dark:border-red-900" : "bg-amber-50 border-amber-200 dark:bg-amber-950/20 dark:border-amber-900"
+                a.severity === "critical" ? "bg-red-500/[0.06] border-red-500/10" : "bg-amber-500/[0.06] border-amber-500/10"
               }`}>
                 <div className="flex items-center gap-2 mb-1">
                   <div className={`w-2 h-2 rounded-full ${a.severity === "critical" ? "bg-red-500 animate-pulse" : "bg-amber-500"}`} />

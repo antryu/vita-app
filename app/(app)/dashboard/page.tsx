@@ -37,7 +37,7 @@ export default function DashboardPage() {
       {/* Header */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-between">
         <div>
-          <p className="text-xs text-muted-foreground">Good morning</p>
+          <p className="text-xs text-muted-foreground">좋은 아침이에요</p>
           <h1 className="text-xl font-bold">정호님</h1>
         </div>
         <div className="flex items-center gap-3">
@@ -87,7 +87,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-3">
-                <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/20 text-[10px]">Excellent</Badge>
+                <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/20 text-[10px]">양호</Badge>
                 <span className="text-xs text-emerald-400 flex items-center gap-0.5"><TrendingUp className="w-3 h-3" />+3</span>
               </div>
               <div className="flex items-end gap-1 h-10">
@@ -107,10 +107,10 @@ export default function DashboardPage() {
       {/* Bento Vitals */}
       <div className="grid grid-cols-2 gap-3">
         {[
-          { icon: Heart, label: "Heart Rate", value: "68", unit: "bpm", glow: "glow-red", accent: "#f43f5e", bg: "rgba(244,63,94,0.08)", border: "rgba(244,63,94,0.12)" },
-          { icon: Wind, label: "SpO2", value: "97.3", unit: "%", glow: "glow-blue", accent: "#3b82f6", bg: "rgba(59,130,246,0.08)", border: "rgba(59,130,246,0.12)" },
-          { icon: Moon, label: "Sleep", value: "6h42m", unit: "", sub: "Deep 28%", glow: "glow-purple", accent: "#8b5cf6", bg: "rgba(139,92,246,0.08)", border: "rgba(139,92,246,0.12)" },
-          { icon: Zap, label: "Stress", value: "Low", unit: "", sub: "32pts", glow: "glow-gold", accent: "#f59e0b", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.12)" },
+          { icon: Heart, label: "심박수", value: "68", unit: "bpm", glow: "glow-red", accent: "#f43f5e", bg: "rgba(244,63,94,0.08)", border: "rgba(244,63,94,0.12)" },
+          { icon: Wind, label: "산소포화도", value: "97.3", unit: "%", glow: "glow-blue", accent: "#3b82f6", bg: "rgba(59,130,246,0.08)", border: "rgba(59,130,246,0.12)" },
+          { icon: Moon, label: "수면", value: "6h42m", unit: "", sub: "깊은 잠 28%", glow: "glow-purple", accent: "#8b5cf6", bg: "rgba(139,92,246,0.08)", border: "rgba(139,92,246,0.12)" },
+          { icon: Zap, label: "스트레스", value: "Low", unit: "", sub: "32점", glow: "glow-gold", accent: "#f59e0b", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.12)" },
         ].map((v, i) => (
           <motion.div key={v.label} custom={i + 1} variants={fadeUp} initial="hidden" animate="visible">
             <div className={`rounded-2xl p-4 ${v.glow}`} style={{ background: v.bg, border: `1px solid ${v.border}` }}>
@@ -127,14 +127,14 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      {/* AI Coach */}
+      {/* AI 코칭 */}
       <motion.div custom={5} variants={fadeUp} initial="hidden" animate="visible">
         <div className="rounded-2xl p-5 glow-teal" style={{ background: "rgba(20,184,166,0.06)", border: "1px solid rgba(20,184,166,0.1)" }}>
           <div className="flex items-center gap-2 mb-2.5">
             <div className="w-7 h-7 rounded-lg gradient-vita flex items-center justify-center">
               <Brain className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-xs font-semibold" style={{ color: "#14b8a6" }}>AI Coach</span>
+            <span className="text-xs font-semibold" style={{ color: "#14b8a6" }}>AI 코칭</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             수면의 질이 이번 주 꾸준히 개선되고 있습니다. 스트레스 회복력도 좋은 상태입니다. 오늘은 30분 산책을 추천드립니다.
@@ -142,21 +142,21 @@ export default function DashboardPage() {
         </div>
       </motion.div>
 
-      {/* Vital Cash + Activity */}
+      {/* 바이탈 캐시 + Activity */}
       <div className="grid grid-cols-5 gap-3">
         <motion.div custom={6} variants={fadeUp} initial="hidden" animate="visible" className="col-span-3">
           <div className="rounded-2xl p-4 glow-gold" style={{ background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.1)" }}>
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-1.5">
                 <Coins className="w-3.5 h-3.5 text-[#f59e0b]" />
-                <span className="text-[10px] text-muted-foreground">Vital Cash</span>
+                <span className="text-[10px] text-muted-foreground">바이탈 캐시</span>
               </div>
               <ChevronRight className="w-3 h-3 text-white/20" />
             </div>
             <p className="text-2xl font-black tabular-nums">12,400<span className="text-xs font-normal text-muted-foreground ml-0.5">P</span></p>
             <div className="flex gap-2 mt-2">
-              <span className="text-[10px] text-emerald-400">+500 sleep</span>
-              <span className="text-[10px] text-emerald-400">+300 HRV</span>
+              <span className="text-[10px] text-emerald-400">+500 숙면</span>
+              <span className="text-[10px] text-emerald-400">+300 회복</span>
             </div>
           </div>
         </motion.div>
@@ -165,22 +165,22 @@ export default function DashboardPage() {
             <Footprints className="w-4 h-4 text-emerald-400" />
             <div>
               <p className="text-xl font-black tabular-nums">4,328</p>
-              <p className="text-[10px] text-muted-foreground">steps / 54%</p>
+              <p className="text-[10px] text-muted-foreground">걸음 / 54%</p>
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Score Breakdown */}
+      {/* 점수 상세 */}
       <motion.div custom={8} variants={fadeUp} initial="hidden" animate="visible">
         <div className="rounded-2xl p-4" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.04)" }}>
-          <p className="text-[10px] text-muted-foreground mb-3 tracking-widest uppercase">Score Breakdown</p>
+          <p className="text-[10px] text-muted-foreground mb-3 tracking-widest uppercase">점수 상세</p>
           <div className="space-y-2.5">
             {[
-              { label: "Sleep Quality", score: 82, color: "#8b5cf6" },
-              { label: "Stress Recovery", score: 71, color: "#f59e0b" },
-              { label: "Cardiac Stability", score: 93, color: "#f43f5e" },
-              { label: "Activity Level", score: 65, color: "#10b981" },
+              { label: "수면 품질", score: 82, color: "#8b5cf6" },
+              { label: "스트레스 회복", score: 71, color: "#f59e0b" },
+              { label: "심박 안정성", score: 93, color: "#f43f5e" },
+              { label: "활동량", score: 65, color: "#10b981" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="flex justify-between text-[11px] mb-1">
@@ -204,7 +204,7 @@ export default function DashboardPage() {
             <Flame className="w-5 h-5 text-[#f43f5e]" />
           </div>
           <div>
-            <p className="text-sm font-bold">7-Day Streak</p>
+            <p className="text-sm font-bold">7일 연속 달성</p>
             <p className="text-[10px] text-muted-foreground">숙면 목표를 7일 연속 달성</p>
           </div>
           <Badge className="ml-auto text-[10px]" style={{ background: "rgba(244,63,94,0.15)", color: "#f43f5e", border: "1px solid rgba(244,63,94,0.2)" }}>+1,000P</Badge>
