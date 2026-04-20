@@ -137,18 +137,6 @@ export function AppSidebar() {
             {!collapsed && <span>{dark ? "라이트 모드" : "다크 모드"}</span>}
           </button>
 
-          <a
-            href="https://vita-platform.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-3 px-3 py-2 rounded-lg text-xs text-white/40 hover:text-white/70 hover:bg-white/5 transition-colors ${
-              collapsed ? "justify-center" : ""
-            }`}
-          >
-            <Shield className="w-3.5 h-3.5 shrink-0" />
-            {!collapsed && <span>마케팅 사이트</span>}
-          </a>
-
           <button
             className={`flex items-center gap-3 px-3 py-2 rounded-lg text-xs text-white/40 hover:text-white/70 hover:bg-white/5 transition-colors w-full ${
               collapsed ? "justify-center" : ""
